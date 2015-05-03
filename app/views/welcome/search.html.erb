@@ -1,0 +1,7 @@
+<h1>search result</h1>
+<%= params[:q] %>
+<ul>
+	<% @via_pinners.each do |via_pinner| %>
+		<li><%= via_pinner %></li>
+	<% end %>
+</ul>
