@@ -25,7 +25,7 @@ class WelcomeController < ApplicationController
   		http.use_ssl = true
   		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-  		tries ||= 5
+  		tries ||= 10
   		begin
   			@data = http.get(uri.request_uri)
   		rescue
