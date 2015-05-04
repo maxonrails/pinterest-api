@@ -49,6 +49,14 @@ class WelcomeController < ApplicationController
   		@via_pinners.push(via_pinner)
 
   	end
-  	
+  	@via_pinners_count = Hash.new
+    @via_pinners.each do |via_pinner|
+      if @via_pinners_count.has_key?(via_pinner)
+        @via_pinners_count[via_pinner] += 1
+      else
+        @via_pinners_count[via_pinner] = 1
+      end
+    end
+
   end
 end
